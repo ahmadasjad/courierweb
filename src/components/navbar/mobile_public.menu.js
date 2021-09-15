@@ -17,9 +17,10 @@ const MobileMenu = () => {
         />
         <MenuList>
             {
-                    menus.map((menu,index)=>{
-                        return <NavLink to={menu.path}
+                    menus.map((menu)=>{
+                        return <MenuItem color={'black'}><NavLink to={menu.path}
                                 key={menu.label}
+                                exact
                                 activeStyle={{
                                     fontWeight: "bold",
                                     color: "red"
@@ -29,12 +30,10 @@ const MobileMenu = () => {
                                     {menu.label}
                                 </Tooltip>
                         </NavLink>
-                    })
+                        </MenuItem>
+                })
                 }
-            {/* <MenuItem as={Link}>New File</MenuItem>
-            <MenuItem as={Link}>New Window</MenuItem>
-            <MenuItem as={Link}>Open...</MenuItem>
-            <MenuItem as={Link}>Save File</MenuItem> */}
+        
         </MenuList>
         </Menu>
     )

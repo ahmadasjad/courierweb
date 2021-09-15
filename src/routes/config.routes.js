@@ -1,6 +1,7 @@
 import {lazy} from 'react';
 const HomePage=lazy(()=>import('../pages/home.page'));
 const ServicePage=lazy(()=>import('../pages/services.page'));
+const AboutPage=lazy(()=>import('../pages/aboutus.page'))
 const LoginPage=lazy(()=>import('../pages/login.page'));
 const DashboardPage=lazy(()=>import('../pages/dashboard.page'))
 const RoutesConfig=[
@@ -15,6 +16,12 @@ const RoutesConfig=[
         restricted:false,
         component:ServicePage
     },
+     {
+        path:'/aboutus',
+        exact:true,
+        restricted:false,
+        component:AboutPage
+    },
     {
         path:'/login',
         exact:true,
@@ -26,7 +33,8 @@ const RoutesConfig=[
         exact:true,
         restricted:true,
         component:DashboardPage
-    }
+    },
+   
 ]
 
 export default RoutesConfig
