@@ -1,10 +1,14 @@
 import React from 'react';
-import { screen } from '@testing-library/react';
-import { render } from './test-utils';
 import App from './App';
+import { create } from 'react-test-renderer';
+import {shallow} from 'enzyme';
+////enjyme
+const components=shallow(<App/>)
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn chakra/i);
-  expect(linkElement).toBeInTheDocument();
-});
+/////snapshot
+describe('My first snapshot test',()=>{
+    test('testing childs', () => {
+    let tree = create(<App />)
+    expect(tree.toJSON()).toMatchSnapshot();
+  })
+})

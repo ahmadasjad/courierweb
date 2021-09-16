@@ -1,7 +1,9 @@
 import React,{useEffect} from 'react';
 import {ChakraProvider} from '@chakra-ui/react';
 import {Helmet} from "react-helmet";
-import { BrowserRouter } from 'react-router-dom';
+import { 
+  BrowserRouter
+} from 'react-router-dom';
 import axios from 'axios'
 import Routes from './routes/index.routes'
 import theme from './theme/index.theme'

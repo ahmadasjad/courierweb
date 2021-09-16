@@ -6,10 +6,10 @@ import * as serviceWorker from './serviceWorker';
 import { hydrate, render } from "react-dom";
 
 const rootElement = document.getElementById("root");
-let AppCompoent=<StrictMode>
+let AppCompoent=(<StrictMode>
                    <ColorModeScript />
                     <App />
-                </StrictMode>
+                </StrictMode>)
 
 if (rootElement.hasChildNodes()) {
   hydrate(AppCompoent, rootElement);
