@@ -1,0 +1,19 @@
+.about-pic-container{
+    background-image: url('../../../assets/Pictures/Male-couriers-delivering-parcels.webp');
+    background-size:  contain;
+    background-repeat: no-repeat, no-repeat;
+    background-position:center;
+    padding: 20px;
+    min-height: 300px;
+}
+.about-mission-container{
+    order: 2px solid #f1f1f1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 34px 39px 29px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: relative;
+}

@@ -4,8 +4,9 @@ const theme=extendTheme({
     styles:{
         global:{
             body:{
-                bg:'#8dd8dd',
-                color:'#ffffff',
+                // bg:'#8dd8dd',
+                fontFamily: 'Poppins,sans-serif',
+                color: '#888888',
                 fontsize:'14px',
                 fontWeight:400,
             },
@@ -22,5 +23,5 @@ const theme=extendTheme({
             ...colors,
         },
     }
-})
-export default theme
+});
+export default theme;

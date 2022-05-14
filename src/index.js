@@ -1,20 +1,24 @@
-import { ColorModeScript } from '@chakra-ui/react';
-import React, { StrictMode } from 'react';
+import React from 'react';
+import ReactDOM from "react-dom/client";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
-import { hydrate, render } from "react-dom";
 
-const rootElement = document.getElementById("root");
-let AppCompoent=(<StrictMode>
-                   <ColorModeScript />
-                    <App />
-                </StrictMode>)
+const container = document.getElementById("root");
+let AppComponent=(
+                    App 
+                )
 
-if (rootElement.hasChildNodes()) {
-  hydrate(AppCompoent, rootElement);
+if (container.hasChildNodes()) {
+  const root = ReactDOM.hydrateRoot(container);
+  root.render(
+      <AppComponent />
+  );
 } else {
-  render(AppCompoent, rootElement);
+  const root = ReactDOM.createRoot(container);
+  root.render(
+      <AppComponent />
+  );
 }
 
 

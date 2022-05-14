@@ -1,0 +1,27 @@
+.main-section-container{
+    color: white;
+    text-align: center;
+    width: calc(99vw - 1px);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 141%;
+    background-image: url('../../assets/Pictures/back2.webp');
+    .shadow-container{
+        opacity: 0.4;
+        color: white;
+        position: relative;
+        background-color: black;
+        height: 100%;
+        // padding: 50px;
+        .text-container{
+            padding-left:110px;
+            width: 99vw;
+            float: right;
+            // right: 0;
+            align-content: center;
+            text-transform: initial;
+            // text-align: center;
+            text-size-adjust: inherit;
+        }
+    }
+}

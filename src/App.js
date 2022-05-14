@@ -1,11 +1,14 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,StrictMode} from 'react';
+import { ColorModeScript } from '@chakra-ui/react';
+import { Provider } from 'react-redux';
+import {store} from './redux/store';
 import {ChakraProvider} from '@chakra-ui/react';
-import {Helmet} from "react-helmet";
+import {Helmet,HelmetProvider} from "react-helmet-async";
 import { 
   BrowserRouter
 } from 'react-router-dom';
 import axios from 'axios'
-import Routes from './routes/index.routes'
+import WebRoutes from './routes/index.routes'
 import theme from './theme/index.theme'
 function App() {
  useEffect(()=>{
@@ -15,17 +18,25 @@ function App() {
         console.log(res)
     })
   })
-  return (
+  return (<StrictMode>
+    <HelmetProvider>
     <ChakraProvider theme={theme}>
+      
+    <ColorModeScript />
+   
        <Helmet>
                 <meta charSet="utf-8" />
                 <title>Courier GO</title>
                 <meta name="keywords" content="courier,send parsel,dtdc price"/>
       </Helmet>
+      <Provider store={store}>
       <BrowserRouter>
-        <Routes />
+        <WebRoutes />
       </BrowserRouter>
-    </ChakraProvider>
+      </Provider>
+    </ChakraProvider> 
+    </HelmetProvider>
+    </StrictMode>
   );
 }
 
