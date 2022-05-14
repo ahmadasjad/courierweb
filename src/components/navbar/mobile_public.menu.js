@@ -17,9 +17,9 @@ const MobileMenu = () => {
         />
         <MenuList>
             {
-                    menus.map((menu)=>{
+                    menus.map((menu,index)=>{
                         return <MenuItem color={'black'}><NavLink to={menu.path}
-                                key={menu.label}
+                                key={`${menu.label}${index}`}
                                 exact
                                 activeStyle={{
                                     fontWeight: "bold",

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container,Flex,Spacer} from '@chakra-ui/react';
+import {Container,Flex,Spacer,Image} from '@chakra-ui/react';
 import Menu from '../components/navbar/public.menu';
 import MobileMenu from '../components/navbar/mobile_public.menu';
 import logo from '../assets/public/moveitlogo.png';
@@ -10,7 +10,15 @@ const PublicLayouts = ({children}) => {
         <main>
             <header>
                 <Flex>
-                    <img src={logo} alt="Move It Logo" />
+                    
+                    <Image 
+                        h="100px"
+                        w="200px"
+                        src={logo} 
+                        alt="Move It Logo" 
+                        // boxSize="100px"
+                        objectFit="scale-down"
+                    />
                     <Spacer />
                     <nav>
                             {isLargerThan768?<Menu/>:<MobileMenu/>}

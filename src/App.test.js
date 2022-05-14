@@ -1,10 +1,17 @@
 import React from 'react';
-import { screen } from '@testing-library/react';
-import { render } from './test-utils';
 import App from './App';
+import { create } from 'react-test-renderer';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn chakra/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import Adapter from 'enzyme-adapter-react-16';
+import {shallow,configure} from 'enzyme';
+////enjyme
+configure({adapter: new Adapter()});
+describe("Given App structure",()=>{
+    test("Then Routes should be rendred",()=>{
+            const components=shallow(<App/>)
+            // console.log(components.debug())
+            const routesExist=components.find('Routes').exists();
+            expect(routesExist).toBe(true)
+            expect(components).toMatchSnapshot();
+    })
+})
