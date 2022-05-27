@@ -32,7 +32,7 @@ export const ChooseUs = () => {
        </HStack>
           
           <Text p={4} color={'gray.700'}>
-           We are here to provide support for all your quries with our most efficient team so that shipping will become easy and fast in competitive world. 
+           We are here to provide support for all your queries with our most efficient team so that shipping will become easy and fast in competitive world. 
         </Text>
       </Box>
         </VStack>
@@ -46,7 +46,7 @@ export const ChooseUs = () => {
           <Heading p={2} as='h4' size={'sm'} className='box-header'> Quick Mobile Access</Heading>
       </HStack>
           <Text p={4} color={'gray.700'}>
-           Out of your office! no need to warry. Ship your order from anywhere you want with mobile access of our shipping platform. 
+           Out of your office! no need to worry. Ship your order from anywhere you want with mobile access of our shipping platform. 
         </Text>
       </Box>
       <Box 

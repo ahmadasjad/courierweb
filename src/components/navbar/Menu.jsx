@@ -36,7 +36,10 @@ export const Menu = () => {
           <Flex width={['100%', '80%']} m={'auto'}>
           <HStack>
             <IconButton
+              as='a'
+              href='https://facebook.com/quixgo'
               aria-label='btnFacebook'
+              target="_blank" rel="noopener noreferrer"
               variant="ghost"
               colorScheme="grey"
               _hover={{

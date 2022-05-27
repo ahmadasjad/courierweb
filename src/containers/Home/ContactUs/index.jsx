@@ -10,8 +10,17 @@ import {
   } from 'react-icons/ai';
 import Card from '../../../components/Card';
 import ContactForm from './ContactUsForm';
+import { useNavigate } from "react-router-dom";
+import {SOCIAL_LINK} from '../../../utils/constant';
 export const ContactUs = () => {
+  let navigate = useNavigate(); 
     const blackalpha='blackAlpha.800';
+
+  const handleFbClick=(path)=>{
+    // navigate(path);
+    window.open(path);
+  }
+
   return <HStack display={['block','table']} w={'calc(99vw - 1px)'} p={30}>
         <Heading as='h2' color={'blue.800'}>CONTACT DETAILS</Heading>
         <Text color={'black'}>If you have any questions about what we offer for consumers or for business, you can always email us or call us via the below details. We’ll reply within 24 hours
@@ -30,19 +39,23 @@ export const ContactUs = () => {
             {/* <Spacer /> */}
             <Card h='350px' mb={'1px'}>
                 <Heading as='h3' mb={5} size={'md'} color={blackalpha}>Contact Us On</Heading>
-                <Text as={'div'} color={blackalpha}>Office: 1211111</Text>
-                <Text as={'div'} color={blackalpha}>customer Care:0000000</Text>
-                <Text as={'div'} color={blackalpha}>mail us:Support@quixgo.com</Text>
-                <Text as={'div'} color={blackalpha}>Support@quixgo.in</Text>   
+                {/* <Text as={'div'} color={blackalpha}>Office: 1211111</Text> */}
+                {/* <Text as={'div'} color={blackalpha}>customer Care:0000000</Text> */}
+                <Text as={'div'} color={blackalpha}>mail us:support@quixgo.in</Text>
+                {/* <Text as={'div'} color={blackalpha}>Support@quixgo.in</Text>    */}
             </Card>
             {/* <Spacer /> */}
             <Card h='350px' mb={'1px'}>
                 <Heading as='h3' mb={5} size={'md'} color={blackalpha}>We are Social</Heading>
                 <HStack>
             <IconButton
+              as='a'
+              href='https://facebook.com/quixgo'
               aria-label='btnFacebook'
+              target='_blank'
               variant="ghost"
               colorScheme="grey"
+              // onClick={handleFbClick(SOCIAL_LINK.fb)}
               _hover={{
                 background: 'grey',
               }}

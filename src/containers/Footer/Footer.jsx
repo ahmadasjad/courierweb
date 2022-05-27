@@ -70,13 +70,17 @@ export default function LargeWithLogoCentered() {
             <Link href={'#'}>Privacy Policy</Link>
             <Link href={'#'}>Terms of Service</Link>
             <Link href={'#'}>Law Enforcement</Link>
-            <Link href={'#'}>Status</Link>
+            {/* <Link href={'#'}>Status</Link> */}
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Follow Us</ListHeader>
-            <Link href={'#'}>Facebook</Link>
+            <Link 
+              href='https://facebook.com/quixgo'
+              aria-label='btnFacebook'
+              target='_blank'
+              >Facebook</Link>
             <Link href={'#'}>Twitter</Link>
-            <Link href={'#'}>Dribbble</Link>
+            {/* <Link href={'#'}>Dribbble</Link> */}
             <Link href={'#'}>Instagram</Link>
             <Link href={'#'}>LinkedIn</Link>
           </Stack>
