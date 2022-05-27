@@ -26,7 +26,7 @@ function App() {
    
        <Helmet>
                 <meta charSet="utf-8" />
-                <title>Courier GO</title>
+                <title>QUIXGO</title>
                 <meta name="keywords" content="courier,send parsel,dtdc price"/>
       </Helmet>
       <Provider store={store}>

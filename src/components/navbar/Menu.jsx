@@ -84,9 +84,9 @@ export const Menu = () => {
           <LoginButton color='white'/> 
         </Box>
           <Box pt="4px" display={['none','none','block']}>
-            <Text as={'span'} color={'white'}>
+            {/* <Text as={'span'} color={'white'}>
               Opening Hours : Monday - Saturday 10 am to 6 pm
-            </Text>
+            </Text> */}
             
           </Box>
           </Flex>

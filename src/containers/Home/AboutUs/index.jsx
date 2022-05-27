@@ -2,7 +2,7 @@ import React from 'react';
 import {Box,Heading,Text,HStack} from '@chakra-ui/react';
 import './aboutus.scss';
 export const AboutUs = () => {
-  return <HStack h='auto' display={['block','table']} w={'calc(99vw - 1px)'} minH={'400px'}p={30}>
+  return <HStack h='auto' pt={'40px'} display={['block','table']} w={'calc(99vw - 1px)'} minH={'400px'}p={30}>
           <Box display={['block','table-cell']} w={['100%','50%']} pt='60px'>
           {/* <Heading as='h5' size={'sm'} >QUIXGO</Heading> */}
         
