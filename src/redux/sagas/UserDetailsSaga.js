@@ -13,6 +13,7 @@ export function* RegisterUser(payload){
     const {params}=payload;
     var data = qs.stringify(params);
 
+    // const adduserUrl=`${process.env.REACT_APP_BASEURL}${REGISTER_USER_URL}`;
     const adduserUrl=`${process.env.REACT_APP_BASEURL}${REGISTER_USER_URL}`;
     try{
         const addUserValues=yield call(httpCall,{

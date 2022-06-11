@@ -21,7 +21,7 @@ function App() {
   return (<StrictMode>
     <HelmetProvider>
     <ChakraProvider theme={theme}>
-      
+       
     <ColorModeScript />
    
        <Helmet>

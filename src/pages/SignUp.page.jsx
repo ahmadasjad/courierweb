@@ -47,7 +47,7 @@ import { useMediaQuery } from '@chakra-ui/react';
       const validationSchema= Yup.object({
         firstName: Yup.string().min(2, 'Too Short!').required('Required'),
         lastName: Yup.string().min(3, 'Too Short!').required('Required'),
-        email: Yup.string().matches(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,'Invilid Email address').required('Required'),
+        email: Yup.string().matches(/^[a-z0-9+_.-]+@[a-z]+\.[a-z]{2,3}/,'Invilid Email address').required('Required'),
         mobile:Yup.string()
         .required("required")
         .matches( /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/, 'Phone number is not valid')
